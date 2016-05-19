@@ -1,6 +1,7 @@
 module Time.Timestamp exposing ( .. )
 
-{-| This module lets you wrap your component into
+{-| This module lets you wrap your component such, that incoming messages will
+be transparently decorated with timestamps.
 
 @docs Model, Message, update, view
 
