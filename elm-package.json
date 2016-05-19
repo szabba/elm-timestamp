@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "summary": "Lets you get timestamps along each message you receive.",
+    "repository": "https://github.com/szabba/elm-timestamp.git",
+    "license": "MPL2",
+    "source-directories": [
+        "."
+    ],
+    "exposed-modules": [],
+    "dependencies": {
+        "elm-lang/core": "4.0.0 <= v < 5.0.0"
+    },
+    "elm-version": "0.17.0 <= v < 0.18.0"
+}
