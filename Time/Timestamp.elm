@@ -3,7 +3,7 @@ module Time.Timestamp exposing ( .. )
 {-| This module lets you wrap your component such, that incoming messages will
 be transparently decorated with timestamps.
 
-@docs Model, Message, update, view
+@docs Model, Message, update, subscriptions, view
 
 -}
 
@@ -23,6 +23,7 @@ type alias Model msg model =
     { model : model
     , update : (msg, Time) -> model -> (model, Cmd msg)
     , view : model -> Html msg
+    , subscriptions : model -> Sub msg
     }
 
 
@@ -59,6 +60,17 @@ update msg model =
                 (\t -> Timed t msg)
                 Time.now
             )
+
+
+-- SUBSCRIPTIONS
+
+
+{-| The subscription for the wrapped component.
+
+-}
+subscriptions : Model msg model -> Sub (Message msg)
+subscriptions { model, subscriptions } =
+    Sub.map Untimed <| subscriptions model
 
 
 -- VIEW

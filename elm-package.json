@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "2.0.0",
     "summary": "Lets you get timestamps along each message you receive.",
     "repository": "https://github.com/szabba/elm-timestamp.git",
     "license": "MPL2",
